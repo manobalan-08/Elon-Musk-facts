@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .fact {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .fact h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #007BFF;
+        }
+
+        .fact p {
+            margin: 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Facts About Elon Musk</h1>
+        <div id="facts-container"></div>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Birthplace",
+                "description": "Elon Musk was born on June 28, 1971, in Pretoria, South Africa."
+            },
+            {
+                "fact": "Early Interests",
+                "description": "He developed an interest in computers and technology at a young age, teaching himself programming by the age of 12."
+            },
+            {
+                "fact": "Education",
+                "description": "Musk attended Queen's University in Canada and later transferred to the University of Pennsylvania, where he earned degrees in both physics and economics."
+            },
+            {
+                "fact": "Zip2 Corporation",
+                "description": "In 1996, Musk co-founded Zip2, a city guide software for newspapers, which was sold to Compaq for nearly $300 million in 1999."
+            },
+            {
+                "fact": "X.com and PayPal",
+                "description": "Musk founded X.com in 1999, an online payment company that later became PayPal after a merger. PayPal was sold to eBay for $1.5 billion in stock in 2002."
+            },
+            {
+                "fact": "SpaceX",
+                "description": "In 2002, Musk founded SpaceX (Space Exploration Technologies Corp.) with the goal of reducing space transportation costs and enabling the colonization of Mars."
+            },
+            {
+                "fact": "Tesla, Inc.",
+                "description": "Musk joined Tesla Motors, Inc. (now Tesla, Inc.) in 2004 as chairman of the board and later became CEO and product architect, leading the company in electric vehicle production."
+            },
+            {
+                "fact": "SolarCity",
+                "description": "In 2006, Musk co-founded SolarCity, a solar energy services company, which was later acquired by Tesla and became its solar division."
+            },
+            {
+                "fact": "Neuralink",
+                "description": "In 2016, Musk co-founded Neuralink, a neurotechnology company focused on developing brain-computer interfaces."
+            },
+            {
+                "fact": "The Boring Company",
+                "description": "In 2016, he founded The Boring Company, which aims to reduce traffic congestion through tunnel construction and infrastructure development."
+            }
+        ];
+
+        function displayFacts() {
+            const factsContainer = document.getElementById('facts-container');
+            facts.forEach(fact => {
+                const factDiv = document.createElement('div');
+                factDiv.className = 'fact';
+                factDiv.innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+                factsContainer.appendChild(factDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', displayFacts);
+    </script>
+</body>
+</html>
